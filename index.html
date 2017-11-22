@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	账号：<input type="text" id='user'><br><br>
+	密码：<input type="text" id='pass'><br><br>
+	　　　　　　　　　　　<button id="btn">提交</button>
+	<script type="text/javascript">
+		btn.onclick=function(){
+		ajax({
+			url:'http://localhost:8080',
+			type:'get',
+			data:{
+				user:user.value,
+				pass:pass.value
+			},
+			success:function(data){
+				console.log(data)
+			}
+		})
+
+		}
+	
+</script>
+<script type="text/javascript" src="ajax.js"></script>
+</body>
+</html>
